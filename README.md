@@ -1,4 +1,4 @@
-#Rewards API
+##Rewards API
 Una aplicacion sencilla y rapida construida usando el framework Django, para la visualizacion de compras y recompensas de los usuarios.
 ##¿Como probarla?
 Deberas abrir una terminal de PowerShell o CMD en la carpeta del proyecto para activar el entorno virtual de Django, simplemente ejecuta los siguientes comandos:
