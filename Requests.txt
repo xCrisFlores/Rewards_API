@@ -1,0 +1,63 @@
+
+//Requests para el primer usuario:
+
+//Requests para crear compras:
+
+Invoke-RestMethod -Uri "http://127.0.0.1:8000/api/compras/" `
+    -Method POST `
+    -Headers @{ "accept" = "application/json"; "Content-Type" = "application/json" } `
+    -Body '{"id": 1, "amount": 100.5, "user": "John"}'
+
+Invoke-RestMethod -Uri "http://127.0.0.1:8000/api/compras/" `
+    -Method POST `
+    -Headers @{ "accept" = "application/json"; "Content-Type" = "application/json" } `
+    -Body '{"id": 1, "amount": 24.5, "user": "John"}'
+
+
+Invoke-RestMethod -Uri "http://127.0.0.1:8000/api/compras/" `
+    -Method POST `
+    -Headers @{ "accept" = "application/json"; "Content-Type" = "application/json" } `
+    -Body '{"id": 1, "amount": 500, "user": "John"}'
+
+//Request para visualizar las compras del primer usuario:
+
+Invoke-RestMethod -Uri "http://127.0.0.1:8000/api/compras/John" `
+    -Method GET `
+    -Headers @{ "accept" = "application/json" }
+
+
+//Request para visualizar los puntos del primer usuario:
+
+Invoke-RestMethod -Uri "http://127.0.0.1:8000/api/puntos/John" `
+    -Method GET `
+    -Headers @{ "accept" = "application/json" }
+
+
+//Requests para el segundo usuario:
+
+//Request para crear compras:
+
+Invoke-RestMethod -Uri "http://127.0.0.1:8000/api/compras/" `
+    -Method POST `
+    -Headers @{ "accept" = "application/json"; "Content-Type" = "application/json" } `
+    -Body '{"id": 2, "amount": 10, "user": "Victor"}'
+
+
+Invoke-RestMethod -Uri "http://127.0.0.1:8000/api/compras/" `
+    -Method POST `
+    -Headers @{ "accept" = "application/json"; "Content-Type" = "application/json" } `
+    -Body '{"id": 2, "amount": 29, "user": "Victor"}'
+
+
+//Request para visualizar las compras del segundo usuario:
+
+Invoke-RestMethod -Uri "http://127.0.0.1:8000/api/compras/Victor" `
+    -Method GET `
+    -Headers @{ "accept" = "application/json" }
+
+//Request para visualizar los puntos del segundo usuario:
+
+Invoke-RestMethod -Uri "http://127.0.0.1:8000/api/puntos/Victor" `
+    -Method GET `
+    -Headers @{ "accept" = "application/json" }
+
